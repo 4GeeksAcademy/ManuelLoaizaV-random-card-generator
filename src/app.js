@@ -93,14 +93,20 @@ newCardButton.addEventListener("click", event => {
 });
 
 const MIN_WIDTH = 250;
+const MAX_WIDTH = 750;
 const MIN_HEIGHT = 350;
+const MAX_HEIGHT = 1050;
 
 const widthInput = document.getElementById("width-input");
 const heightInput = document.getElementById("height-input");
 
 widthInput.addEventListener("change", event => {
   const newWidth = event.target.value;
-  if (newWidth !== null && parseInt(newWidth) >= MIN_WIDTH) {
+  if (
+    newWidth !== null &&
+    MIN_WIDTH <= parseInt(newWidth) &&
+    parseInt(newWidth) <= MAX_WIDTH
+  ) {
     const card = document.getElementsByClassName("card")[0];
     card.style.setProperty("width", `${newWidth}px`);
   }
@@ -108,7 +114,11 @@ widthInput.addEventListener("change", event => {
 
 heightInput.addEventListener("change", event => {
   const newHeight = event.target.value;
-  if (newHeight !== null && parseInt(newHeight) >= MIN_HEIGHT) {
+  if (
+    newHeight !== null &&
+    MIN_HEIGHT <= parseInt(newHeight) &&
+    parseInt(newHeight) <= MAX_HEIGHT
+  ) {
     const card = document.getElementsByClassName("card")[0];
     card.style.setProperty("height", `${newHeight}px`);
   }

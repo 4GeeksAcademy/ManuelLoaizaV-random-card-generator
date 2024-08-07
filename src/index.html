@@ -15,22 +15,21 @@
   <body class="bg-success">
     <!-- Card -->
     <div class="d-flex justify-content-center mt-5">
-      <!-- TODO: Figure out a way to round the card only rounding card instead of each section -->
-      <div class="card rounded-4" style="width:250px;height:350px;">
+      <div class="card rounded-4 bg-white" style="width:250px;height:350px;">
         <!-- Top left suit -->
-        <div class="card-header rounded-4 border-bottom-0 bg-white">
+        <div class="card-header border-bottom-0 bg-transparent">
           <div class="d-flex align-items-center justify-content-start h-100">
             <p class="text-white fs-1 mb-0" id="card-header-text"></p>
           </div>
         </div>
         <!-- Rank in the center -->
-        <div class="card-body rounded-4">
+        <div class="card-body bg-transparent">
           <div class="d-flex align-items-center justify-content-center h-100">
             <p class="text-white fs-1 mb-0" id="card-body-text"></p>
           </div>
         </div>
         <!-- Bottom right suit -->
-        <div class="card-footer rounded-4 border-top-0 bg-white">
+        <div class="card-footer border-top-0 bg-transparent">
           <div class="d-flex align-items-center justify-content-end h-100">
             <p class="text-white fs-1 mb-0" id="card-footer-text"></p>
           </div>
@@ -53,18 +52,20 @@
                 <input
                   type="number"
                   min="250"
+                  max="750"
                   class="form-control"
-                  placeholder="Must be at least 250 pixels."
-                  aria-label="Must be at least 250 pixels."
+                  placeholder="Must be between 250 and 750 pixels."
+                  aria-label="Must be between 250 and 750 pixels."
                   id="width-input"
                 />
                 <span class="input-group-text">Height</span>
                 <input
                   type="number"
                   min="350"
+                  max="1050"
                   class="form-control"
-                  placeholder="Must be at least 350 pixels."
-                  aria-label="Must be at least 350 pixels."
+                  placeholder="Must be between 350 and 1050 pixels."
+                  aria-label="Must be between 350 and 1050 pixels."
                   id="height-input"
               />
             </div>
